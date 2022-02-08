@@ -1,0 +1,20 @@
+a xor 0=a;
+a xor a=0;
+a xor(a xor b)=a;
+
+
+
+
+
+->CODEFORCES QUESTION 
+LINK->https://codeforces.com/contest/1632/problem/B
+here question is about arranging 0 to n-1 numbers in order such that ,maximum value among xor of adjacent numbers is minimum;
+THAT IS max1≤i≤n−1pi⊕pi+1  is minimum;
+here we must understand that,when ever it has been said to reduce maximum,first we must reduce msb;
+to reduce msb,we must arrange numbers with msb highest in order,but the last element in order doesnt have right side counter part to reduce its msb,
+so definitely we will xor with another number will be having msb 1,as xor of 1 and 0 is 1.so now we must reduce that xor->as this will be the only one the array having msb 1;
+so least number we can get is msb 1 and remaining all 0s that is 1000000.... like this.
+so to get that we must xor 1000... with 0.
+we can arrange remaining in any order,as it doesnt matter once we made the max value we can get to minimum.
+
+
