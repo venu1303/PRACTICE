@@ -1,6 +1,10 @@
 GFG QUESTION:Minimum in an array which is first decreasing then increasing.
 --->https://www.geeksforgeeks.org/minimum-in-an-array-which-is-first-decreasing-then-increasing/
 --->https://www.hackerrank.com/contests/nitw-do-or-die/challenges/return-of-technozion(this concept can be used in this do or die contest question  :)
-(here instead of calculus,we use binary search here
+(here instead of calculus,we use binary search,to find the value at which function is minimum,that means here function is first decreasing and increasing.)
+
+
+CODECHEF QUESTION:IT WAS SIMPLE BSOS ON SOLUTION.(BSOS-BINARY SEARCH OVER SOLUTION)
+([https://www.codechef.com/problems/CHEF_GARLAND/])
 
 
