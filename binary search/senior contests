@@ -6,5 +6,11 @@ GFG QUESTION:Minimum in an array which is first decreasing then increasing.
 
 CODECHEF QUESTION:IT WAS SIMPLE BSOS ON SOLUTION.(BSOS-BINARY SEARCH OVER SOLUTION)
 [garland problem](https://www.codechef.com/problems/CHEF_GARLAND/)
+editorial-https://discuss.codechef.com/t/chef-garland-editorial/98151
+in this problem,we do bsos over solution,as function(arr[i]) is monotonically increasing ,and we need to find maximum value of arr[i],where f(arr[i]) is <=m.
+here we do bsos from 1 to max(arr[i]),as definitely solutions lies between this,as at max[a[i]],ans is atmost n,but given n<=m;so definitely solution exist.
+**this question basically tests our idea of applying bsos,and also identifying limits for applying bsos**
+we compare mid value's f(arr[i]) with m,and decide accoringly.
+
 
 
