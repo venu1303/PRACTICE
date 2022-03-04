@@ -1,1 +1,37 @@
-,,
+MERGE SORT IN LINKED LIST;
+/LEETCODE SORT THE LIST QUESTION/
+
+
+here after finding mid,we are hereitself dividing left part and right part;
+ ListNode* mid(ListNode *head){
+        ListNode *sp=head,*fp=head;
+        fp=fp->next->next;
+        while(fp&&fp->next){
+            sp=sp->next;fp=fp->next->next;
+        }
+        ListNode* mid=sp->next;sp->next=NULL;return mid;
+    }
+    ListNode* merge(ListNode *left,ListNode *right){
+        ListNode *L=new ListNode(0);ListNode* x=L;
+        while(left&&right){
+            if(left->val<right->val)
+            {x->next=new ListNode(left->val);x=x->next;left=left->next;}
+            else{x->next=new ListNode(right->val);x=x->next;right=right->next;}
+        }
+        while(left){
+            x->next=new ListNode(left->val);x=x->next;left=left->next;
+        }
+        while(right){
+           x->next=new ListNode(right->val);x=x->next;right=right->next;
+        }
+        return L->next;
+    }
+    ListNode* sortList(ListNode* head) {
+        if(!head||!head->next)return head;
+        ListNode* mi=mid(head);
+        ListNode *left=sortList(head);
+        ListNode *right=sortList(mi);
+        return merge(left,right);
+    }
+};
+TIME COMPLEXITY->O(N);
